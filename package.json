@@ -1,0 +1,25 @@
+{
+  "name": "js-ai-face-emotion-recognition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "face-api.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickMezacapa/JS-Ai-Face-Emotion-Recognition.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickMezacapa/JS-Ai-Face-Emotion-Recognition/issues"
+  },
+  "homepage": "https://github.com/NickMezacapa/JS-Ai-Face-Emotion-Recognition#readme",
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
