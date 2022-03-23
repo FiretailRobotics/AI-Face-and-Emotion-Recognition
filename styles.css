@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: url("./assets/ai-bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+canvas {
+	position: absolute;
+	z-index: 1;
+}
+h1 {
+	position: absolute;
+	top: 80px;
+	left: 50px;
+	z-index: -1;
+	font-size: 2.2rem;
+}
+p {
+	position: absolute;
+	top: 88%;
+	left: 50%;
+	z-index: -1;
+	font-size: 1.5rem;
+}
+p span a:hover {
+	cursor: pointer;
+}
+p span a,
+p span a:visited {
+	text-decoration: underline;
+	color: white;
+}
