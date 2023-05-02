@@ -3,10 +3,10 @@ const video = document.querySelector("#video");
 // Load models to detect face and expressions
 // Asynchronous calls will be made in parallel for quicker execution
 Promise.all([
-	faceapi.nets.tinyFaceDetector.loadFromUri("/models"), // Characterization of scale, resolution, and context to find faces
-	faceapi.nets.faceLandmark68Net.loadFromUri("/models"), // Register diff parts of face (mouth, eyes..)
-	faceapi.nets.faceRecognitionNet.loadFromUri("/models"), // Register face total area
-	faceapi.nets.faceExpressionNet.loadFromUri("/models"), // Register expressions - smiling, frowning, etc.
+    faceapi.nets.tinyFaceDetector.loadFromUri("/models/tiny_face_detector_model-weights_manifest.json"),
+    faceapi.nets.faceLandmark68Net.loadFromUri("/models/face_landmark_68_model-weights_manifest.json"),
+    faceapi.nets.faceRecognitionNet.loadFromUri("/models/face_recognition_model-weights_manifest.json"),
+    faceapi.nets.faceExpressionNet.loadFromUri("/models/face_expression_model-weights_manifest.json")
 ]).then(startVideo);
 
 // Start webcam access
