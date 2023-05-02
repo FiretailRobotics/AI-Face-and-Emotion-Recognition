@@ -10,12 +10,13 @@ Promise.all([
 ]).then(startVideo);
 
 // Start webcam access
-function startVideo() {
-	navigator.getUserMedia(
-		{ video: {} },
-		(stream) => (video.srcObject = stream),
-		(err) => console.error(err),
-	);
+async function startVideo() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+    video.srcObject = stream;
+  } catch (error) {
+    console.error('Error accessing webcam:', error);
+  }
 }
 
 // When video starts playing, recognize face
